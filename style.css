@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: conic-gradient(rgb(200, 194, 243),rgb(209, 150, 243),rgb(240, 158, 208),rgb(240, 158, 158),rgb(240, 178, 158),rgb(239, 240, 158),rgb(151, 233, 167),rgb(169, 223, 235) );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.wrapper {
+  border: 3px solid #2e10d7; 
+  padding:15px;
+  text-align: center;
+  background-color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 50px;
+}
+.heading,.material-symbols-outlined
+{
+   text-transform: uppercase;
+   display: inline-block; 
+   vertical-align: middle;
+  background-image: linear-gradient(
+    -225deg,
+    #17e221 5%,
+    #ddd011 30%,
+    #ff4e13 67%,
+    #3a13e8 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+      font-size: 40px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  font-size: 48px;
+}
+
+.form-group {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+label {
+  flex: 1;
+  margin: 10px;
+  color: #000000;
+  cursor: default;
+  font-size: medium;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  transition: color 0.3s;
+}
+
+input[type="file"]{
+  color: #3498db;
+  cursor: pointer;
+
+  transition: border 0.3s, color 0.3s, background-color 0.3s;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea {
+  flex: 2;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #070505;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s, color 0.3s, background-color 0.3s;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="file"]:hover,
+textarea:hover {
+  border: 2px solid #2d0af2;
+}
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #010101
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #18c532;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+.notesection{
+  padding:10px 0 0 0;
+  font-size: medium;
+  font-family: 'Roboto Condensed', sans-serif;
+  justify-content: left;
+  align-items: left;
+}
+.para{
+  font-size:18px;
+  font-family: 'Roboto Condensed', sans-serif;
+  justify-content: left;
+  align-items: left; 
+}
